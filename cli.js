@@ -51,10 +51,10 @@ function URLDecode (text) {
 function display (plaintext) {
 	if (plaintext != 'Ciphertext doesn\'t seem to be URL-encoded') {
 		const leading = (cli.flags["plain"]) ? `` : `${logSymbols.success} `
-		console.log(leading + plaintext)
+		console.log(plaintext)
 	} else {
 		const leading = (cli.flags["plain"]) ? `` : `${logSymbols.error} `
-		console.log(leading + `Ciphertext doesn\'t seem to be URL-encoded`)
+		console.log(`Ciphertext doesn\'t seem to be URL-encoded`)
 		process.exit(1);
 	}
 }
